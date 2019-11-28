@@ -68,8 +68,8 @@ for my $remote_repo (@{$rl_conf->{remote_repos}}){
 	$remote_request_string .= $remote_repo->{search_script}."?q=$q";
 
 	#print STDERR $remote_request_string."\n";
-	if($remote_request_string !~ /^http:\/\//){
-		$remote_request_string = "http://".$remote_request_string;
+	if($remote_request_string !~ /^https:\/\//){
+		$remote_request_string = "https://".$remote_request_string;
 	}
 
 	my $browser = LWP::UserAgent->new;
